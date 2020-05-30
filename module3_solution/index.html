@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lallan Da Restaurant</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!--******************HEADER*********-->
+		<header>
+			<nav id="header-nav" class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<div class="navbar-brand">
+							<a href="index.html"><h1>Food,LLC</h1></a>
+						</div>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+						<!--These classes used in bootstrap are for dropdown menu-->
+						<!--data target class is used to direct this to unordered list items--> 
+						<!--NAVBAR_TOGGLE is set to display only in small device-->
+						<!--data-toggle,data-target are HTML5 api's--> 
+				            <span class="sr-only">Toggle navigation</span>
+				            <!--This will be the box-->
+				            <span class="icon-bar"></span>
+				            <!--These will be the three horizontal lines inside the dropdown menu-->
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				        </button>
+					</div>
+					<!--From here we'll make the unordered list for the  three options on the right-->
+					<div id="collapsable-nav" class="collapse navbar-collapse">
+						<!--The id collapsable-nav used here gives reference to the dropdown menu in the mobile format, so than when it collapses ie doesnt work, it will be directed here-->
+			           	<ul id="nav-list" class="nav navbar-nav navbar-right">
+			           	<!--Unordered list is used for the three items-->
+			           	<!--NAVBAR_RIGHT in class is basically float right,which tells the navbar to shift right-->
+				            <li class="visible-xs ">
+				            	<a href="#">
+				            		Chicken
+				            	</a>
+				            </li>
+				            <li class="visible-xs"><!--List items-->  
+					            <a href="#">
+					               Beef
+					            </a>
+				            </li>
+				            <li class="visible-xs">
+					        	<a href="#">
+					            	Shushi 
+					            </a>
+				            </li>				           
+			         	</ul><!-- #nav-list -->
+        			</div><!-- .collapse .navbar-collapse -->
+				</div> <!-- .conatiner for header ends-->
+			</nav><!--Header nav ends-->
+		</header>
+		<div id="main-content" class="container-fluid">
+			<div class="menu-title"><h2 class="text-center">Our Menu</h2></div>
+			<section class="row">
+				<div class="col-xs-12 ">
+					<h3 class="text-center">Chicken</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a laoreet turpis. Curabitur hendrerit eros ut nisi rutrum commodo. Duis accumsan, nibh vitae ornare dictum, purus tortor vulputate erat, in mattis lectus lorem ac massa. Quisque quis feugiat nibh, a suscipit arcu. Maecenas purus leo, elementum eget nibh sit amet, sagittis rutrum mauris. Nam arcu sapien, tincidunt vel ultricies in, porta ac tortor. Morbi vitae libero sed nisl venenatis lobortis vel at ligula. Sed tristique orci consequat aliquam vehicula. Aliquam sagittis urna nisl, id porttitor lacus consectetur at. Nulla facilisi. Morbi venenatis varius lectus, vehicula dictum nisl faucibus sed. Nulla in commodo arcu. Quisque congue, ligula et fringilla bibendum, magna urna tempor massa, ut varius nisl sapien non est. In rutrum eget nunc eget suscipit. Mauris nec sollicitudin turpis. Morbi nisl diam, tristique et metus in, dignissim placerat turpis.
+
+                        Curabitur sagittis diam nisl, a sollicitudin libero tempor a. Fusce id tortor et lacus lacinia fermentum. Sed sollicitudin lorem sed volutpat eleifend. Duis porttitor placerat risus in rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi quis cursus lacus, a congue felis. Fusce quam nisi, tincidunt ac dapibus id, bibendum maximus magna. Nulla sagittis elit sed massa tempus blandit. Ut eget leo mattis, commodo tellus non, aliquet nibh. Vivamus malesuada mauris id leo auctor rhoncus. Sed ac neque felis. Quisque gravida est ac mollis tincidunt. 
+                    </p>
+				</div>
+			</section>
+		</div>
+
+
+
+		<!--jQuery(Bootstrap JS plugin depends on it)--> 
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
