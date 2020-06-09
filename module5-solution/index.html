@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lallan Da Restaurant</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!--******************HEADER*********-->
+		<header>
+		<!--This is a method of making header bar using bootstrap-->
+			<nav id="header-nav" class="navbar navbar-default"><!--Bootstrap provides base class and a subclass -->
+			<!--SUBCLASS basically uses base class and adds sumthing to it-->
+			<!--Thats why we used nav before CONTAINER, cause we want header to stretch thru out the page-->
+				<div class="container"><!--This is bootstrap used container,it stretches by 15px in page-->
+				<!--This container is used for the header-->
+					<div class="navbar-header"><!--Navbars are responsive meta components that serve as navigation headers for your application or sit. Basically this is a BOOTSTRAP recommendation, which tells us to use it, when we have to display a header BAR-->
+						<a href="index.html" style="float: left" class="visible-md visible-lg">
+						<!--VISIBLE-MD is a bootstrap class, which say the A will only be visible in mddle size screen-->
+							<div id="logo-img" alt="Logo image"></div><!--ALT tell what type of content is there-->
+						</a> 
+
+						<div class="navbar-brand"><!--Again div tag used by bootstrap for displaying header brand-->
+							<a href="index.html"><h1>Lallan Da Restaurant</h1></a>
+							<p><!--This will be displayed below thebrand name-->
+								<img src="images/star-k-logo.png" alt="Kosher Certification">
+								<span>KOSHER CERTIFIED</span>
+							</p>
+						</div>
+						<!--NOW We'll make the dropdown menu button for mobile view-->
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+						<!--These classes used in bootstrap are for dropdown menu-->
+						<!--data target class is used to direct this to unordered list items--> 
+						<!--NAVBAR_TOGGLE is set to display only in small device-->
+						<!--data-toggle,data-target are HTML5 api's--> 
+				            <span class="sr-only">Toggle navigation</span>
+				            <!--This will be the box-->
+				            <span class="icon-bar"></span>
+				            <!--These will be the three horizontal lines inside the dropdown menu-->
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				        </button>
+					</div>
+					<!--From here we'll make the unordered list for the  three options on the right-->
+					<div id="collapsable-nav" class="collapse navbar-collapse">
+						<!--The id collapsable-nav used here gives reference to the dropdown menu in the mobile format, so than when it collapses ie doesnt work, it will be directed here-->
+			           	<ul id="nav-list" class="nav navbar-nav navbar-right">
+			           	<!--Unordered list is used for the three items-->
+			           	<!--NAVBAR_RIGHT in class is basically float right,which tells the navbar to shift right-->
+				            <li id="navHomeButton" class="visible-xs active"><!-- It'll be active alltime, cause samescript, so we'll use JS  -->
+				            	<a href="index.html">
+				            		<span class="glymphicon glymphicon-home"></span>Home
+				            	</a>
+				            </li>
+				            <li id="navMenuButton"><!--List items-->  
+					            <a href="#" onclick="$dc.loadMenuCategories();">
+					                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu
+					                <!--The span used before menu written is used to display the icon,glyphicon glyphicon-cutlery is used to bring the icon font for cutlery--> 
+					                <!--Hidden-xs used in br cause the break to go away when the screen size is extrasmall, ie in mobile version it will come side by side-->
+					                <!--We can get all the glypicons at COMPONENT is bootstrap-->
+					            </a>
+				            </li>
+				            <li>
+					            <a href="#" >
+					                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About
+					                <!--glyphicon glyphicon-info-sign class is used to bring in icon font for sign, above the ABOUT written-->
+					            </a>
+				            </li>
+				            <li>
+					            <a href="#">
+					                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards
+					                <!--glyphicon glyphicon-certificate class is used to display the icon font for awards-->
+					            </a>
+				            </li>
+				            <li id="phone" class="hidden-xs">
+					            <a href="tel:410-602-5008">
+					            <!--Here we used phone no in link, so that if anyone taps on it, it triggers the phoone to call on that number-->
+					            <!--And this will also be hidden, when the screen is extra small-->
+					                <span>410-602-5008</span>
+					            </a>
+				                <div>* We Deliver</div>
+				            </li>
+			         	</ul><!-- #nav-list -->
+        			</div><!-- .collapse .navbar-collapse -->
+				</div> <!-- .conatiner for header ends-->
+			</nav><!--Header nav ends-->
+		</header>
+		<!--Now we make a call button for the mobile view,which will be below the header brand-->
+		<div id="call-btn" class="visible-xs"><!--Visisble-xs class, so that it will be in mobile version only-->
+			<a class="btn" href="tel:410-602-5008">
+				<span class="glyphicon glyphicon-earphone"></span> <!--For displaying the icon-->
+				410-602-5008
+			</a>
+		</div>
+		<div id="xs-deliver" class="text-center visible-xs">*We Deliver</div>
+
+
+		<!--*********** MAIN PAGE*****************-->
+		<div id="main-content" class="container"></div><!--This container will also be under the header container-->
+			
+		<!--FOOTER----->
+		<footer class="panel-footer">
+			<div class="container"><!--SAME BOOTSTRAP TECHNIQUE, TO MAKE container, then row, then columns-->
+				<div class="row"><!--NOW ROW, then we'll make three columns-->
+					<section id="hours" class="col-sm-4"><!--First columm-->
+						<span>Hours:</span><br>
+						Sun-Thurs: 11:15am- 10:00pm<br>
+						Fri: 11:15am- 2:30pm<br>
+						Saturday Closed
+						<hr class="visible-xs"><!--This is a line, which's only visible in mobile version-->
+						<!--Cause the sections will start stacking in extra small version-->
+					</section>
+					<section id="address" class="col-sm-4"><!--three cell in a row-->
+						<span>Address:</span><br>
+				        7105 Reisterstown Road<br>
+				        Baltimore, MD 21215
+				        <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliver</p>
+				        <hr class="visible-xs">
+				    </section>
+			        <section id="testimonials" class="col-sm-4">
+			          	<p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+			          	<p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+			        </section>
+      			</div>
+      			<div class="text-center">&copy; Copyright David Chu's China Bistro 2020</div>
+    		</div>
+ 		</footer>
+
+
+
+		<!--jQuery(Bootstrap JS plugin depends on it)--> 
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		 <script src="js/ajax-utils.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

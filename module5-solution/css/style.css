@@ -1,0 +1,408 @@
+body
+{
+	font-size: 16px;
+	color: #fff;
+	background-color: #61122f;
+	font-family: 'Oxygen', san-serif;
+}
+/*HEADER*/
+#header-nav
+{
+	background-color: #f6b310;
+	border-radius: 0;
+	border:0;
+}
+#logo-img
+{
+	background:url('../images/restaurant-logo_large.png') no-repeat;/*WE use this type URL, so that it searches the image*/
+	width: 150px;
+	height: 150px;
+	margin:10px 15px 10px 0;
+}
+.navbar-brand
+{
+	padding-top: 20px;
+}
+.navbar-brand h1/*Restaurant Name*/
+{
+	font-family: 'Lora', serif;
+	color: #557c3e;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 0.75;
+}
+.navbar-brand a:hover,.navbar-brand a:focus
+{
+	text-decoration: none;
+}
+.navbar-brand p/*Kosher certified*/
+{
+	color: #000;
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-top: 15px;
+}
+.navbar-brand p span
+{
+	vertical-align: middle;	
+}
+#nav-list
+{
+	margin-top: 10px;
+}
+#nav-list a
+{
+	color: #951c49;
+	text-align: center;
+}
+#nav-list a:hover
+{
+	background:#E7E7E7;
+}
+#nav-list a span
+{
+	font-size: 1.8em;/*This says that te glyphicon will be 1.8 times bigger than the menu written, as its above it*/
+}
+#phone
+{
+	margin-top: 5px;
+}
+#phone a/* Phone no*/
+{
+	text-align: right;
+	padding-bottom: 0px;
+}
+#phone div /*WE DELIVer*/
+{
+	color: #557c3e;
+	text-align: right;
+	padding-right: 15px;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar
+{
+	border:1px solid #61122f;
+}
+.navbar-header button.navbar-toggle
+{
+		clear: both;
+		margin-top: -30px;
+}
+/*END HEADER*/
+/*THIS IS HOW BOOTSTRAP DIVIDES ITS BREAKPOINTS*/
+/**********HOME PAGE********/
+.container .jumbotron
+{
+	box-shadow: 0 0 50px #3F0C1F;
+	border:2px solid #3F0C1F;
+}
+#menu-tile, #specials-tile, #map-tile
+{
+	height: 250px;
+	width: 100%;/*Means the div will have all the width of the bootstrap class grid*/
+	margin-bottom: 15px;
+	position: relative;
+	border:2px solid #3F0C1F;
+	overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover
+{
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile
+{
+	background:url(../images/menu-tile.jpg) no-repeat;
+	background-position: center;
+}
+#specials-tile
+{
+	background:url(../images/specials-tile.jpg) no-repeat;
+	background-position: center;
+}
+#menu-tile span, #specials-tile span, #map-tile span
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width:100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.7;
+}
+  
+/************END HOME PAGE********/
+/*********MENU CATEGORIES PAGE*********/
+.category-tile { 
+  position: relative;/*Cause of the span item, this div item will be relative anchor*/
+  border: 2px solid #3F0C1F;
+  overflow: hidden;/*So, if anything is sticking out, it wont*/ 
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;/*Equal on the both sides, and 15px margin from bottom*/ 
+}
+.category-tile span {
+  position: absolute;/*So this will be absolute, as it only resides inside the images*/ 
+  bottom: 0;/*Sp that it will be come at the bottom center*/ 
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div {/*This will affect the title and its next sibling*/
+  margin-bottom: 50px;
+}
+/* END MENU CATEGORIES PAGE */  
+/*SINGLE CETGORIES PAGE******/
+.menu-item-tile
+{
+	margin-bottom: 25px;
+}
+.menu-item-tile hr
+{
+	width: 80%;
+}
+.menu-item-tile .menu-item-price
+{
+	font-size: 1.1em;
+	text-align:right;
+	margin-top: -15px;
+	margin-right: -15px;
+}
+.menu-item-tile .menu-item-price span
+{
+	font-size: .6em;
+}
+.menu-item-photo
+{
+	position: relative;/*here, we use relative cause we wanna absolute the tag box insie*/
+	border:2px solid #3F0C1F;
+	overflow: hidden;
+	padding:0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+}
+.menu-item-photo div/*This isfor the tab inside*/
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #557c3e;
+	text-align: center;
+}
+.menu-item-description 
+{
+	padding-right: 30px;
+}
+h3.menu-item-title
+{
+	margin:0 0 10px;
+}
+.menu-item-detail
+{	
+	font-style: .9em;
+	font-style: italic;
+}
+/***********FOOTER*************/
+.panel-footer
+{
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top:0;
+}
+.panel-footer div.row
+{
+	margin-bottom: 35px;
+}
+#hours span, #address span
+{
+	font-size: 1.3em;
+}
+#hours, #address
+{
+	line-height: 2;
+}
+#address p
+{
+	font-size: .8em;
+	color: #557c3e;
+	line-height: 1.8;
+}
+#testimonials
+{
+	font-style: italic;
+}
+#testimonials p:nth-child(2)
+{
+	margin-top: 25px;
+}
+/***********MEDIA QUERIESS********/
+/*LARGE DEVICES*/
+@media (min-width: 1200px)
+{
+	/*JUMBOTRON*/
+	.container .jumbotron
+	{
+		background:url(../images/jumbotron_1200.jpg) no-repeat;
+		height: 675px;
+	}
+}
+/*MEDIUM DEVICES*/
+@media (min-width: 992px) and (max-width: 1199px)
+{
+	#logo-img
+	{
+		background:url('../images/restaurant-logo_medium.png') no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 5px 5px 5px 0;
+	}
+	/*JUMBOTRON*/
+	.container .jumbotron
+	{
+		background:url(../images/jumbotron_992.jpg) no-repeat;
+		height: 558px;
+	}
+}
+/*SMALL DEVICES*/
+@media (min-width: 768px) and (max-width: 991px)
+{
+	/*JUMBOTRON*/
+	.container .jumbotron
+	{
+		background:url(../images/jumbotron_768.jpg) no-repeat;
+		height: 432px;
+	}
+
+}
+/*EXTRA SMALL DEVICES*/
+@media (max-width: 767px)
+{
+	.navbar-brand
+	{
+		padding-top: 10px;
+		height: 80px;
+	}
+	.navbar-brand h1/*restaurant name*/
+	{
+		padding-top: 10px;
+		font-size: 5vw; /*1% of viewport width, we use it cause its responsive*/
+	}
+	.navbar-brand p/*kosher certi*/
+	{
+		font-size: .6em;/*And this em will be relevant to vw*/
+		margin-top: 12px;
+	}
+	.navbar-brand p img
+	{
+		height: 20px;
+	}
+	#collapsable-nav a /*This will be the total size of both menu and glyphicon*/
+	{
+		font-size: 1.2em;
+	}
+	#collapsable-nav a span/*Since earlier glyphicon is 1.8em of menu written, inorder make em equal we'll overwrite*/
+	{
+		font-size: 1em;/*This is overwritten, as prev was 1.8em, which will be only applicable in  large size*/
+		margin-right: 5px;
+	}
+	#call-btn a
+	{
+		font-size: 1.5em;
+		color: #61122f;
+		background:#f6b310;
+		border:2px solid #fff;
+		display: block;/*This will cover the whole width*/
+		margin:0 20px;
+		padding: 10px;
+	}
+	#xs-deliver
+	{
+		margin-top: 5px;
+		font-size: .7em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+	/*****HOMEPAGE***/
+	.container .jumbotron/*This will overwrite the bootstrap file, cause there its mentioned like this*/
+	{
+		padding:0;/*NO PADDING FROM ANY SIDE*/
+		margin-top: 30px;
+		box-shadow: 0 0 50px #3F0C1F;
+		border:2px solid #3F0C1F;	
+	}
+	/*****TILES******/
+	#menu-tile, #specials-tile 
+	{
+		width: 360px;
+		margin:0 auto 15px;
+	}
+	.panel-footer section
+	{
+		margin-top: 30px;
+		text-align:center;
+	}
+	.panel-footer section:nth-child(3)
+	{
+		margin-bottom: 0;
+	}
+	.panel-footer section hr
+	{
+		width: 50%;
+	}
+	/*SINGLE CATEGORIES PAGE********/
+	.menu-item-photo/*This will take the image to the center in mobile version*/   
+	{
+		margin-right: auto;
+	}
+	.menu-item-tile .menu-item-price
+	{
+		text-align: center;
+	}
+	.menu-item-description
+	{
+		text-align: center; 
+	}
+}
+/**********END SEPERATE DEVICE STYLING********/
+/*******SUPER EXTRA SMALL DEVICE ******/
+@media (max-width: 479px)
+{
+	.navbar-brand h1
+	{
+		font-size: 6vw;
+		padding-top: 5px;
+	}
+	#menu-tile, #specials-tile, #map-tile
+	{
+		width: 280px;
+		margin:0 auto 15px;
+	}	
+	/*THE MENU CATEGORIES TILES*/
+	.col-xxs-12
+	{
+		position: relative;
+		min-height: 1px;
+		padding: 0 15px;
+		float: left;
+		width: 100%;/*Basically it'll take the whole screen, but will be only 200px wide, and all other styles*/
+	}
+}
